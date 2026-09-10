@@ -192,7 +192,7 @@ B.Tech Computer Science Engineering
 - **Export reports** — save the full analysis (statistics, rankings, grade distribution) to a CSV or PDF file
 - **Weighted scoring** — allow different subjects to carry different weights when calculating the final aggregate
 - **Persistent storage** — store student records in a SQLite database so results can be queried across multiple sessions
-- **Interactive CLI with user-friendly menus** — add a menu-driven interface so the user can choose which analysis to run without editing code
+- **Interactive CLI with menu-driven result analysis** — add a menu-driven interface so the user can choose which analysis to run without editing code
 - **Unit tests** — write `pytest` tests for each analysis function to guard against regressions as the project grows
 
 ---
