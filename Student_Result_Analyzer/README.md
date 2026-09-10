@@ -186,12 +186,14 @@ B.Tech Computer Science Engineering
 
 ## ⭐ Future Improvements
 
-- Read marks from a CSV file using Pandas
-- Visualize results using Matplotlib
-- Export reports to CSV
-- Add student names and IDs
-- Interactive menu-driven version
-- Subject-wise result analysis
+- **Load real data** — read student names, IDs, and marks from a CSV file using Pandas instead of generating random values
+- **Multi-subject support** — extend the analyzer to handle marks across several subjects and compute per-subject and overall GPA
+- **Visualization** — plot grade distribution histograms and score-vs-rank charts with Matplotlib or Seaborn
+- **Export reports** — save the full analysis (statistics, rankings, grade distribution) to a CSV or PDF file
+- **Weighted scoring** — allow different subjects to carry different weights when calculating the final aggregate
+- **Persistent storage** — store student records in a SQLite database so results can be queried across multiple sessions
+- **Interactive CLI** — add a menu-driven interface so the user can choose which analysis to run without editing code
+- **Unit tests** — write `pytest` tests for each analysis function to guard against regressions as the project grows
 
 ---
 
