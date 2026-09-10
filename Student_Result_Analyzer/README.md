@@ -101,6 +101,54 @@ Pass Percentage : 73.33%
 
 ---
 
+## 🔄 Project Workflow
+
+Here is a plain-language walkthrough of what happens from start to finish when you run the program:
+
+1. **Start the program**  
+   Running `python student_result_analyzer.py` calls the `main()` function, which acts as the entry point and orchestrates every step below.
+
+2. **Generate student data**  
+   `generate_marks()` uses NumPy's random number generator to produce an array of **30 marks**, each between **0 and 100**, simulating a class of students.
+
+3. **Compute basic statistics**  
+   `show_statistics()` feeds that marks array into NumPy functions to instantly calculate and display:
+   - Total marks, average, highest, lowest, median, standard deviation, and variance.
+
+4. **Analyse performance by band**  
+   `performance_analysis()` uses **NumPy boolean masking** to slice the array into five score bands (A → F) and lists which students fall into each band.
+
+5. **Determine pass / fail outcomes**  
+   `pass_fail_analysis()` counts how many students passed (≥ 35), failed (< 35), and earned a distinction (≥ 90), then converts the counts to percentages.
+
+6. **Rank students**  
+   `show_rankings()` sorts the array with `np.sort()` and `np.argsort()` to identify and print the **top 5** and **bottom 5** performers by mark.
+
+7. **Find unique marks**  
+   `unique_marks()` uses `np.unique()` to list every distinct mark that appears in the class, removing duplicates.
+
+8. **Display grade distribution**  
+   `grade_distribution()` counts how many students landed in each letter-grade bucket (A, B, C, D, F) and prints a summary table.
+
+9. **Output is printed to the console**  
+   All results are displayed in clearly labelled sections directly in the terminal — no files are written and no external database is needed.
+
+```
+run script
+    │
+    ▼
+generate_marks()          ← random NumPy array of 30 marks
+    │
+    ├─► show_statistics()      ← mean, max, min, std, variance …
+    ├─► performance_analysis() ← grade bands via boolean masking
+    ├─► pass_fail_analysis()   ← pass/fail counts & percentages
+    ├─► show_rankings()        ← top 5 / bottom 5 by argsort
+    ├─► unique_marks()         ← deduplicated marks via np.unique
+    └─► grade_distribution()   ← count per grade bucket
+```
+
+---
+
 ## 📚 NumPy Concepts Used
 
 - ndarray
