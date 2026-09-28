@@ -411,3 +411,16 @@ df.to_csv(
 )
 
 print("\nAnalysis results saved successfully!")
+print("\n10 Students Requiring the Most Attention:")
+
+print(
+    students_needing_attention[
+        [
+            "Student_ID",
+            "Branch",
+            "Average_Marks",
+            "Attendance",
+            "Study_Hours"
+        ]
+    ].head(10)
+)
