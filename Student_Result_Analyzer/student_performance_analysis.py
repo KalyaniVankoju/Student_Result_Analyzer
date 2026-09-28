@@ -308,3 +308,106 @@ plt.savefig(
     bbox_inches="tight"
 )
 plt.close()
+
+# ============================================================
+# Figure 3: Average Marks Distribution
+# ============================================================
+
+plt.figure(figsize=(8, 5))
+
+plt.hist(
+    df["Average_Marks"],
+    bins=10
+)
+
+plt.title("Distribution of Average Marks")
+plt.xlabel("Average Marks")
+plt.ylabel("Number of Students")
+
+plt.tight_layout()
+plt.savefig(
+    charts_folder / "Figure_3.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
+# ============================================================
+# Figure 4: Attendance vs Average Marks
+# ============================================================
+
+plt.figure(figsize=(8, 5))
+
+plt.scatter(
+    df["Attendance"],
+    df["Average_Marks"]
+)
+
+plt.title("Attendance vs Average Marks")
+plt.xlabel("Attendance (%)")
+plt.ylabel("Average Marks")
+
+plt.tight_layout()
+plt.savefig(
+    charts_folder / "Figure_4.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
+# ============================================================
+# Figure 5: Study Hours vs Average Marks
+# ============================================================
+
+plt.figure(figsize=(8, 5))
+
+plt.scatter(
+    df["Study_Hours"],
+    df["Average_Marks"]
+)
+
+plt.title("Study Hours vs Average Marks")
+plt.xlabel("Study Hours per Day")
+plt.ylabel("Average Marks")
+
+plt.tight_layout()
+plt.savefig(
+    charts_folder / "Figure_5.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
+# ============================================================
+# Figure 6: Branch Performance
+# ============================================================
+
+plt.figure(figsize=(8, 5))
+
+plt.bar(
+    branch_performance.index,
+    branch_performance.values
+)
+
+plt.title("Average Marks by Branch")
+plt.xlabel("Branch")
+plt.ylabel("Average Marks")
+
+plt.tight_layout()
+plt.savefig(
+    charts_folder / "Figure_6.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
+# ============================================================
+# 11. EXPORT ANALYSIS RESULTS
+# ============================================================
+
+df.to_csv(
+    "student_performance_results.csv",
+    index=False
+)
+
+print("\nAnalysis results saved successfully!")
